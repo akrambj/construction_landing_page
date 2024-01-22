@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/imgs/logo.svg";
 import logoWhite from "../../assets/imgs/logoWhite.svg";
 import Socials from "../data/Socials";
@@ -6,6 +6,28 @@ import Socials from "../data/Socials";
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [selectedLink, setSelectedLink] = useState(0);
+  const [scrollVersion, setScrollVersion] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the scroll position is greater than or equal to 200
+      if (window.scrollY >= 200) {
+        setScrollVersion(true);
+      } else {
+        setScrollVersion(false);
+      }
+    };
+
+    // Attach the event listener to the window
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array ensures the effect runs once when the component mounts
+
+  console.log(scrollVersion);
 
   const menuItems = [
     { name: "à Propos", link: "/" },
@@ -18,15 +40,19 @@ const Header = () => {
     setMenuToggle((prevMenuToggle) => !prevMenuToggle);
   };
   return (
-    <header className="w-screen fixed top-0 left-0 flex items-center justify-between py-4 px-7 ">
-      <div className={`logo w-[60%] relative z-40`}>
+    <header className="w-screen fixed top-0 left-0 flex items-center justify-between py-4 px-7  lg:px-32">
+      <div
+        className={`logo w-[60%] xs:w-[50%] md:w-[30%] xl:w-[20%] relative z-40 ${
+          scrollVersion ? "opacity-0" : "opacity-100"
+        } duration-300`}
+      >
         <img
           className="w-full h-full object-cover duration-300 "
           src={menuToggle ? logoWhite : logo}
           alt="logo"
         />
       </div>
-      <div className="menu">
+      <div className="menu md:hidden">
         <div
           className={`menuicon z-50 ${menuToggle ? "openMenu" : ""}`}
           onClick={toggleMenu}
@@ -84,6 +110,30 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <nav
+        className={`items-center  hidden md:flex ${
+          scrollVersion
+            ? "bg-white shadow-xl py-3 px-5 rounded-lg"
+            : "bg-transparent py-0 px-0"
+        } duration-300`}
+      >
+        <ul className="flex items-center gap-5">
+          {menuItems.map((item, index) => (
+            <li
+              className={`uppercase text-sm md:text-base xl:text-lg ${
+                selectedLink === index ? "text-yellow-primary font-bold" : ""
+              }`}
+              key={index}
+              onClick={() => {
+                setMenuToggle(false);
+                setSelectedLink(index);
+              }}
+            >
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 };
