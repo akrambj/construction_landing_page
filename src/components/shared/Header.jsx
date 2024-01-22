@@ -10,7 +10,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the scroll position is greater than or equal to 200
       if (window.scrollY >= 200) {
         setScrollVersion(true);
       } else {
@@ -18,14 +17,12 @@ const Header = () => {
       }
     };
 
-    // Attach the event listener to the window
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array ensures the effect runs once when the component mounts
+  }, []);
 
   console.log(scrollVersion);
 
@@ -120,7 +117,7 @@ const Header = () => {
         <ul className="flex items-center gap-5">
           {menuItems.map((item, index) => (
             <li
-              className={`uppercase text-sm md:text-base xl:text-lg ${
+              className={`cursor-pointer uppercase text-sm md:text-base xl:text-lg hover:text-yellow-primary duration-300 ${
                 selectedLink === index ? "text-yellow-primary font-bold" : ""
               }`}
               key={index}
