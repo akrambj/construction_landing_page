@@ -97,3 +97,10 @@ body {
 }
 
 
+
+.bg-logo {
+  background-image: url(assets/imgs/logo-bg.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

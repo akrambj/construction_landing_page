@@ -6,9 +6,13 @@ import CTABtn from "../components/shared/CTABtn";
 const SharedLayout = () => {
   return (
     <main className="w-screen min-h-screen flex flex-col justify-between overflow-x-hidden">
-      <Header />
-      <CTABtn />
-      <Outlet />
+      <div>
+        <Header />
+      </div>
+      {/* <CTABtn /> */}
+      <div>
+        <Outlet />
+      </div>
       <Footer />
     </main>
   );
