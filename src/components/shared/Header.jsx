@@ -39,7 +39,9 @@ const Header = () => {
   return (
     <header
       className={`w-screen ${
-        scrollVersion ? "shadow-lg bg-gray" : "bg-transparent"
+        scrollVersion
+          ? "shadow-lg bg-gray lg:shadow-none lg:bg-transparent"
+          : "bg-transparent"
       } duration-300 fixed top-3 left-0 flex items-center justify-between py-4 px-7  md:px-24 lg:px-40 md:py-10 z-50`}
     >
       <div

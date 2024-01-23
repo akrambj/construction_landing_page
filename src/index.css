@@ -104,3 +104,23 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+
+.service:hover .service-btn {
+  color: white;
+  border-color: white;
+}
+
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.services-bg {
+  background-image: url(assets/imgs/logo-bg.svg);
+  background-repeat: no-repeat;
+  background-position: -50%;
+  background-size: contain;
+}
