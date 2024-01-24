@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 
+:root {
+  --Montserrat:  'Montserrat', sans-serif;
+}
+
 body {
   overflow-x: hidden;
+  font-family: var(--Montserrat);
 }
 
 .menuicon {
@@ -133,4 +138,13 @@ body {
 
 .testemonial:hover .stars {
   color: white;
+}
+
+
+
+.headerBg {
+  background-image: url(assets/imgs/header/hero.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
