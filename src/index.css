@@ -124,3 +124,13 @@ body {
   background-position: -50%;
   background-size: contain;
 }
+
+
+
+.testemonial:hover .testemonialImg {
+  border-color: #3D6E3F;
+}
+
+.testemonial:hover .stars {
+  color: white;
+}
