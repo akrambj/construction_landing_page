@@ -30,17 +30,17 @@ const Aboutus = () => {
       </div>
       <div className="w-[90%] md:h-[120px] md:rounded-[50px] h-[300px] bg-white drop-shadow-2xl justify-center gap-[1%] mx-auto flex items-center   flex-wrap">
         <div
-          className={`w-[45%] h-[45%] md:h-full bg-[#F7F7F7] md:w-[24%] md:text-sm md:rounded-l-[50px] flex items-center justify-center  flex-col gap-2 text-center `}
+          className={`cursor-pointer text-green-primary hover:bg-green-primary duration-300 hover:text-white w-[45%] h-[45%] md:h-full bg-[#F7F7F7] md:w-[24%] md:text-sm md:rounded-l-[50px] flex items-center justify-center  flex-col gap-2 text-center `}
         >
-          <h4 className="text-green-primary text-2xl font-bold">+10</h4>
+          <h4 className=" text-2xl font-bold">+10</h4>
           <h6>Ans dans L’Industrie</h6>
         </div>
         <Statistic title={"+100"} desc={"Bâtiment dans L’Algérie"} />
         <Statistic title={"+230"} desc={"Membre d’équipe"} />
         <div
-          className={`w-[45%] h-[45%] md:h-full bg-[#F7F7F7] md:w-[24%] md:text-sm md:rounded-r-[50px] flex items-center justify-center  flex-col gap-2 text-center `}
+          className={`cursor-pointer text-green-primary hover:bg-green-primary duration-300 hover:text-white w-[45%] h-[45%] md:h-full bg-[#F7F7F7] md:w-[24%] md:text-sm md:rounded-r-[50px] flex items-center justify-center  flex-col gap-2 text-center `}
         >
-          <h4 className="text-green-primary text-2xl font-bold">+2000</h4>
+          <h4 className="primary text-2xl font-bold">+2000</h4>
           <h6>Capacité</h6>
         </div>
       </div>
