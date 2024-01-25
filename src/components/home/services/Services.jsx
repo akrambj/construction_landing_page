@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import serice01 from "../../../assets/imgs/services/service01.svg";
-import serice02 from "../../../assets/imgs/services/service02.svg";
-import serice03 from "../../../assets/imgs/services/service03.svg";
-import serice04 from "../../../assets/imgs/services/service04.svg";
-import serice05 from "../../../assets/imgs/services/service05.svg";
-import serice06 from "../../../assets/imgs/services/service06.svg";
+import serice01 from "../../../assets/imgs/services/service01.jpg";
+import serice02 from "../../../assets/imgs/services/service02.jpg";
+import serice03 from "../../../assets/imgs/services/service03.jpg";
+import serice04 from "../../../assets/imgs/services/service04.jpg";
+import serice05 from "../../../assets/imgs/services/service05.jpg";
+import serice06 from "../../../assets/imgs/services/service06.jpg";
 import Service from "./Service";
 import PopUp from "./PopUp";
 

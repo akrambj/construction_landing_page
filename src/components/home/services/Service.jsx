@@ -10,7 +10,7 @@ const Service = ({ service, openPopUpHandler }) => {
   return (
     <motion.div
       onClick={openPopUpHandler}
-      className="service flex flex-col gap-5 justify-between py-5 bg-white rounded-[30px] px-5 drop-shadow-2xl shadow-md w-[80%] xs:w-[60%] sm:w-[45%] md:w-[40%] lg:w-[30%] xl:w-[22%] cursor-pointer hover:bg-green-primary hover:text-white duration-300"
+      className="service flex flex-col lg:h-[400px] gap-5 justify-between py-5 bg-white rounded-[30px] px-5 drop-shadow-2xl shadow-md w-[80%] xs:w-[60%] sm:w-[45%] md:w-[40%] lg:w-[30%] xl:w-[22%] cursor-pointer hover:bg-green-primary hover:text-white duration-300"
       initial="hidden"
       animate="visible"
       variants={itemVariants}
@@ -28,7 +28,7 @@ const Service = ({ service, openPopUpHandler }) => {
         <motion.h4 className="font-bold text-lg w-full overflow-x-clip">
           {service.title}
         </motion.h4>
-        <motion.p className="text-[11px] lg:text-[10px]  h-[40%] line-clamp-3">
+        <motion.p className="text-[11px] lg:text-[10px]   line-clamp-3">
           {service.desc}
         </motion.p>
         <motion.button

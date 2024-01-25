@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import contactImg from "../../../assets/imgs/contact/contactImg.svg";
+import contactImg from "../../../assets/imgs/contact/contactImg.jpg";
 import emailjs from "@emailjs/browser";
 import { motion, useAnimation } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
