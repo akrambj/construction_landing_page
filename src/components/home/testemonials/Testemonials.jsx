@@ -91,7 +91,7 @@ const Testemonials = () => {
         >
           <h4 className="font-bold text-4xl">Client</h4>
           <h3 className="text-green-primary font-black text-3xl md:text-5xl">
-            TESTEMONIALS
+            Témoignage
           </h3>
         </motion.div>
         <motion.div
