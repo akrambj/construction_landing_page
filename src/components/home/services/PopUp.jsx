@@ -38,32 +38,7 @@ const PopUp = ({ service, closePopUpHandler, openPopUp }) => {
                 {service.title}
               </h2>
               <p className="opacity-80  h-[70%]  md:h-[80%] mb-auto  md:text-lg  overflow-clip text-sm 2xs:h-[50%] ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                sint nostrum voluptatem illum quis natus consequatur, magni
-                explicabo nihil facilis non earum magnam possimus vel error?
-                Aspernatur sit impedit delectus, architecto repudiandae itaque
-                voluptates quia alias dolor eligendi, eum laboriosam doloribus
-                placeat minus tempora velit laborum dolore corporis eveniet
-                vitae quibusdam repellat ea dignissimos illum. Sed illo ipsam
-                ratione perferendis, eos vitae non mollitia distinctio quibusdam
-                dolorem velit labore nesciunt odit! Aut distinctio voluptates
-                pariatur praesentium soluta delectus et odit aliquid enim
-                deserunt reiciendis maiores esse possimus impedit ad, earum
-                laboriosam ipsum sunt facilis officia deleniti consequatur
-                explicabo id officiis. Accusantium asperiores, porro et harum
-                recusandae voluptas, voluptate, quia nostrum corporis eum
-                officiis eos. Distinctio labore odit dolores nulla iste nesciunt
-                eligendi expedita. Nam expedita explicabo ratione excepturi
-                sapiente odit commodi corrupti doloremque nisi consequuntur! Cum
-                cumque quibusdam facere modi! Impedit exercitationem illo ullam
-                corporis perspiciatis quaerat magni minima neque laborum beatae?
-                Voluptatum deserunt repudiandae architecto. Illum velit at ex
-                eveniet facere, unde reprehenderit labore tempore voluptate
-                voluptates praesentium voluptatibus quos quae eligendi,
-                distinctio impedit necessitatibus voluptas molestiae reiciendis
-                consequatur. Obcaecati, asperiores, repellat quis nobis eius
-                vitae itaque minus iusto doloribus placeat dignissimos omnis
-                dolor reprehenderit ex voluptas, architecto eum!
+                {service.desc}
               </p>
               <button className="bg-green-primary w-[200px] mx-auto md:mx-0 py-2 text-white font-bold text-lg rounded-[20px] hover:bg-black duration-300">
                 Contactez-Nous

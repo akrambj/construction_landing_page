@@ -55,7 +55,15 @@ const Footer = () => {
         </ul>
         <li className="list-none">0612 34 53 78</li>
       </div>
-      <div className="w-[20%] h-[200px] bg-red-300"></div>
+      <div className="w-[20%] h-[200px] ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46275.77316981995!2d6.968251644469975!3d43.53912590325367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce8180530cffff%3A0x40819a5fd979e20!2sCannes%2C%20France!5e0!3m2!1sen!2sdz!4v1706189767764!5m2!1sen!2sdz"
+          className="w-full h-full rounded-lg"
+          allowfullscreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </footer>
   );
 };
