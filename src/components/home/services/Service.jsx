@@ -28,7 +28,7 @@ const Service = ({ service, openPopUpHandler }) => {
         <motion.h4 className="font-bold text-lg w-full overflow-x-clip">
           {service.title}
         </motion.h4>
-        <motion.p className="text-[11px] lg:text-[10px]">
+        <motion.p className="text-[11px] lg:text-[10px]  h-[40%] line-clamp-3">
           {service.desc}
         </motion.p>
         <motion.button

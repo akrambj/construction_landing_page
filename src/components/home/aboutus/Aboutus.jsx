@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import aboutus from "../../../assets/imgs/aboutus.svg";
+import { useEffect, useState } from "react";
+import aboutus from "../../../assets/imgs/about/aboutus.jpg";
 import { motion } from "framer-motion";
 import AnimatedNumber from "./AnimatedNumber ";
 

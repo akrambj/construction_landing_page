@@ -126,7 +126,7 @@ body {
 .services-bg {
   background-image: url(assets/imgs/logo-bg.svg);
   background-repeat: no-repeat;
-  background-position: -50%;
+  background-position: -80%;
   background-size: contain;
 }
 

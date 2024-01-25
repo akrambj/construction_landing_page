@@ -51,37 +51,37 @@ const Services = () => {
   const services = [
     {
       title: "Démolition",
-      desc: "Nous réalisons la démolition de tout type de bâtiment, qu'il s'agisse de maisons, d'immeubles, de hangars ou de structures industrielles...",
+      desc: "Les démolitions ne sont pas simplement une phase nécessaire, mais une opportunité de transformation. Notre équipe gère ces transitions avec professionnalisme, respectant strictement les normes de sécurité, tout en facilitant une évolution fluide vers de nouveaux projets passionnants.",
       img: serice01,
       count: 10,
     },
     {
       title: "Rénovation Intérieur",
-      desc: "Nous effectuons la rénovation de tout type de maison, qu'il s'agisse de rénovation partielle ou totale, de rénovation intérieure ou extérieure...",
+      desc: "L'art de réinventer l'espace intérieur est une passion chez Guerri Bat. Notre service de rénovation va au-delà de la simple mise à jour. Nous fusionnons fonctionnalité et esthétique pour créer des intérieurs qui incarnent parfaitement votre style de vie.",
       img: serice02,
       count: 20,
     },
     {
       title: "Térrassement",
-      desc: "Nous effectuons le terrassement de tout type de terrain, qu'il s'agisse de préparer le sol pour la construction, de créer des fondations...",
+      desc: "Les fondations solides sont la clé de toute construction durable. Notre expertise en terrassement assure la stabilité requise, créant un socle robuste pour soutenir la vision architecturale de votre projet.",
       img: serice03,
       count: 30,
     },
     {
       title: "Architecture Intérieure",
-      desc: "Nous réalisons la démolition de tout type de bâtiment, qu'il s'agisse de maisons, d'immeubles, de hangars ou de structures industrielles...",
+      desc: "Affinez chaque détail de votre espace avec notre expertise en architecture d'intérieur. Chaque choix est délibéré, chaque élément est considéré pour créer des ambiances cohérentes, personnalisées et harmonieuses.",
       img: serice04,
       count: 40,
     },
     {
       title: "Rénovation Extérieur",
-      desc: "Nous effectuons la rénovation de tout type de maison, qu'il s'agisse de rénovation partielle ou totale, de rénovation intérieure ou extérieure...",
+      desc: "Nos projets de rénovation extérieure transforment vos espaces en des environnements accueillants et fonctionnels. Chaque détail est pensé pour revitaliser vos extérieurs, créant ainsi des espaces qui résistent à l'épreuve du temps.",
       img: serice05,
       count: 50,
     },
     {
       title: "Construction",
-      desc: "Nous effectuons le terrassement de tout type de terrain, qu'il s'agisse de préparer le sol pour la construction, de créer des fondations...",
+      desc: "Au cœur de notre savoir-faire, la construction chez Guerri Bat est bien plus qu'une simple réalisation. C'est une histoire méticuleusement écrite, de la conception initiale à l'achèvement, où chaque étape est soigneusement orchestrée pour garantir la précision, la durabilité et la satisfaction du client.",
       img: serice06,
       count: 60,
     },
@@ -102,10 +102,9 @@ const Services = () => {
             NOS SERVICES
           </h2>
           <p className="text-sm w-[95%] lg:text-lg lg:w-[60%] mx-auto opacity-80">
-            Nous vous offrons une gamme complète de services pour tous vos
-            travaux de démolition, rénovation et terrassement. Quelle que soit
-            la nature ou la taille de votre projet, nous vous assurons un
-            résultat à la hauteur de vos attentes.
+            Chez Guerri Bat, nous sommes votre partenaire polyvalent, prêt à
+            répondre à tous vos besoins de construction et de design pour créer
+            des espaces exceptionnels{" "}et{" "}durables.
           </p>
         </div>
         <motion.div
