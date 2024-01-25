@@ -27,11 +27,11 @@ const Header = () => {
   console.log(scrollVersion);
 
   const menuItems = [
-    { name: "Accueil", link: "/" },
-    { name: "à Propos", link: "/" },
+    { name: "Accueil", link: "#home" },
+    { name: "à Propos", link: "#about" },
     { name: "NOS SERVICES", link: "#services" },
-    { name: "Testemonials", link: "#agency" },
-    { name: "Contacts", link: "#values" },
+    { name: "Testemonials", link: "#testemonials" },
+    { name: "Contacts", link: "#contact" },
   ];
 
   const toggleMenu = () => {
@@ -39,21 +39,24 @@ const Header = () => {
   };
   return (
     <header
-      className={`w-screen  duration-300 fixed top-3 left-0 flex items-center justify-between py-4 px-5   md:px-24 lg:px-40 md:py-10 z-50`}
+      className={`w-screen ${
+        scrollVersion ? "lg:justify-center top-[85%]" : "lg:justify-between"
+      } duration-300 fixed top-3 left-0 flex items-center  justify-between py-4 px-5   md:px-24 lg:px-40 md:py-10 z-50`}
     >
       <div
         style={{
-          backdropFilter: "blur(10px)",
-          opacity: scrollVersion ? 0.4 : 0,
+          opacity: scrollVersion ? 0.6 : 0,
         }}
-        className={` bg-black fixed w-[97%] left-[2%] md:w-[88%] py-8 md:left-[7%] rounded-[60px] ${
+        className={` bg-blur fixed w-[97%] opacity-40  left-[2%] md:w-[45%] py-8 md:left-[28%] rounded-[60px] ${
           scrollVersion
             ? "transition-opacity duration-300 ease-in-out"
             : "opacity-0"
         }`}
       ></div>
       <div
-        className={`logo  flex items-center justify-center   w-[65%] xs:w-[50%] md:w-[30%] lg:w-[25%]  relative z-40  duration-300`}
+        className={`logo  ${
+          scrollVersion ? "lg:hidden" : "lg:block"
+        } flex items-center justify-center   w-[65%] xs:w-[50%] md:w-[30%] lg:w-[25%]  relative z-40  duration-300`}
       >
         <img
           className="w-full h-full object-cover duration-300  z-20 lg:cursor-pointer"
@@ -121,23 +124,31 @@ const Header = () => {
       </div>
 
       <nav className={`items-center  hidden md:flex  duration-300 z-20`}>
-        <ul className="flex items-center gap-5 ">
+        <ul
+          className={`${scrollVersion ? "gap-2" : "gap-5"} flex items-center`}
+        >
           {menuItems.map((item, index) => (
             <li
-              className={`cursor-pointer uppercase ${
-                scrollVersion ? "text-black" : "text-white"
-              } text-sm md:text-[11px] lg:text-base hover:text-yellow-primary duration-300  ${
-                selectedLink === index
-                  ? "text-yellow-primary font-bold"
-                  : "text-white"
-              }`}
               key={index}
               onClick={() => {
                 setMenuToggle(false);
                 setSelectedLink(index);
               }}
             >
-              {item.name}
+              <a
+                className={`cursor-pointer uppercase ${
+                  scrollVersion
+                    ? "text-black lg:text-sm"
+                    : "text-white lg:text-base"
+                } text-sm md:text-[11px] lg:text-base hover:text-yellow-primary duration-300  ${
+                  selectedLink === index
+                    ? "text-yellow-primary font-bold"
+                    : "text-white"
+                }`}
+                href={item.link}
+              >
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>

@@ -1,53 +1,78 @@
+// PopUp.js
+import { motion, AnimatePresence } from "framer-motion";
 import { IoIosClose } from "react-icons/io";
 
 const PopUp = ({ service, closePopUpHandler, openPopUp }) => {
-  const transitionStyle = {
-    top: openPopUp ? "0" : "100%",
-    transition: "top 0.5s ease-in",
+  const popupVariants = {
+    hidden: { y: "100%" },
+    visible: { y: 0 },
   };
 
   return (
-    <div
-      className="fixed left-0 right-0 bottom-0 flex items-center justify-center overlay z-[200]"
-      style={transitionStyle}
-    >
-      <div className="w-[70%] h-[80%] bg-white rounded-[20px] drop-shadow-xl flex justify-between p-10 gap-10 relative">
-        <div className="absolute top-4 right-6">
-          <IoIosClose
-            className="text-yellow-primary text-4xl cursor-pointer"
-            onClick={closePopUpHandler}
-          />
-        </div>
-        <div className="w-[50%] drop-shadow-md">
-          <img
-            className="w-full h-full object-cover rounded-xl"
-            src={service.img}
-            alt={service.title}
-          />
-        </div>
-        <div className="flex flex-col justify-between  w-[50%] ">
-          <h2 className="font-black text-4xl text-green-primary">
-            {service.title}
-          </h2>
-          <p className="opacity-80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa
-            ex earum qui veniam hic doloremque totam, dignissimos ratione fuga
-            molestias illo obcaecati ut possimus error maiores expedita optio
-            natus? Est quaerat atque voluptates soluta quam itaque id optio, ab
-            velit veniam modi aut quo ad obcaecati quia expedita totam explicabo
-            enim ipsum deleniti. Autem totam voluptates enim assumenda culpa
-            nesciunt dignissimos accusamus harum quae fugiat? Officiis culpa,
-            iure deleniti quasi reprehenderit excepturi dolores sunt a similique
-            vitae sequi quis atque repudiandae magnam ex dolore accusantium
-            doloribus, dicta error aliquid eius fugit. Natus amet error dolorum
-            aliquam eius numquam dignissimos?
-          </p>
-          <button className="bg-green-primary w-[200px]  py-2 text-white font-bold text-lg rounded-[20px] hover:bg-black duration-300">
-            Contactez-Nous
-          </button>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {openPopUp && (
+        <motion.div
+          className="fixed left-0 right-0 top-0 bottom-0 flex items-center justify-center overlay z-[200]"
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={popupVariants}
+        >
+          <div className="w-[90%] md:w-[70%] h-[90%] bg-white rounded-[20px] drop-shadow-xl md:flex-row flex justify-between px-4 py-10 md:p-10  gap-3 md:gap-10  relative flex-col">
+            <div className="absolute top-1 right-2">
+              <IoIosClose
+                className="text-yellow-primary text-4xl cursor-pointer"
+                onClick={closePopUpHandler}
+              />
+            </div>
+            <div className="w-full sm:w-[70%] sm:mx-auto md:w-[50%] drop-shadow-md">
+              <img
+                loading="lazy"
+                className="w-full h-full object-cover rounded-xl"
+                src={service.img}
+                alt={service.title}
+              />
+            </div>
+            <div className="flex flex-col justify-between text-center md:text-left w-full md:w-[50%] h-[60%] py-2 2xs:pb-5 md:h-full md:gap-4 md:pb-0">
+              <h2 className="font-black text-xl md:text-2xl text-green-primary lg:text-2xl">
+                {service.title}
+              </h2>
+              <p className="opacity-80  h-[70%]  md:h-[80%] mb-auto  md:text-lg  overflow-clip text-sm 2xs:h-[50%] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                sint nostrum voluptatem illum quis natus consequatur, magni
+                explicabo nihil facilis non earum magnam possimus vel error?
+                Aspernatur sit impedit delectus, architecto repudiandae itaque
+                voluptates quia alias dolor eligendi, eum laboriosam doloribus
+                placeat minus tempora velit laborum dolore corporis eveniet
+                vitae quibusdam repellat ea dignissimos illum. Sed illo ipsam
+                ratione perferendis, eos vitae non mollitia distinctio quibusdam
+                dolorem velit labore nesciunt odit! Aut distinctio voluptates
+                pariatur praesentium soluta delectus et odit aliquid enim
+                deserunt reiciendis maiores esse possimus impedit ad, earum
+                laboriosam ipsum sunt facilis officia deleniti consequatur
+                explicabo id officiis. Accusantium asperiores, porro et harum
+                recusandae voluptas, voluptate, quia nostrum corporis eum
+                officiis eos. Distinctio labore odit dolores nulla iste nesciunt
+                eligendi expedita. Nam expedita explicabo ratione excepturi
+                sapiente odit commodi corrupti doloremque nisi consequuntur! Cum
+                cumque quibusdam facere modi! Impedit exercitationem illo ullam
+                corporis perspiciatis quaerat magni minima neque laborum beatae?
+                Voluptatum deserunt repudiandae architecto. Illum velit at ex
+                eveniet facere, unde reprehenderit labore tempore voluptate
+                voluptates praesentium voluptatibus quos quae eligendi,
+                distinctio impedit necessitatibus voluptas molestiae reiciendis
+                consequatur. Obcaecati, asperiores, repellat quis nobis eius
+                vitae itaque minus iusto doloribus placeat dignissimos omnis
+                dolor reprehenderit ex voluptas, architecto eum!
+              </p>
+              <button className="bg-green-primary w-[200px] mx-auto md:mx-0 py-2 text-white font-bold text-lg rounded-[20px] hover:bg-black duration-300">
+                Contactez-Nous
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

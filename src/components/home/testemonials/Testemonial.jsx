@@ -4,7 +4,7 @@ import { IoStarSharp } from "react-icons/io5";
 
 const Testemonial = ({ testemonial }) => {
   return (
-    <div className="testemonial flex flex-col justify-between py-10 bg-white drop-shadow-2xl shadow-md w-[23%] gap-2 rounded-[20px] px-2 cursor-pointer hover:bg-yellow-primary hover:text-white duration-200 transition-all ease-in">
+    <div className="testemonial w-[90%] xs:w-[70%] sm:w-[75%] md:w-[40%] lg:w-[30%] xl:w-[22%] flex flex-col justify-between py-10 bg-white drop-shadow-2xl shadow-md  gap-2 rounded-[20px] px-2 cursor-pointer hover:bg-yellow-primary hover:text-white duration-200 transition-all ease-in">
       <div className="w-[100px] testemonialImg h-[100px] rounded-full bg-yellow-primary absolute left-[50%] translate-x-[-50%] -top-14 border-4 border-yellow-primary transition-all">
         <img
           className="w-full h-full rounded-full object-cover"
@@ -15,7 +15,7 @@ const Testemonial = ({ testemonial }) => {
       <div>
         <div className="flex flex-col gap-2">
           <span className="text-6xl">
-            <img src={testemonialCamel01} alt="" />
+            <img loading="lazy" src={testemonialCamel01} alt="" />
           </span>
           <p className="text-center text-sm opacity-80">
             {testemonial.testemony}

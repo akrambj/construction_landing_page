@@ -1,22 +1,30 @@
 import { useState } from "react";
 import ctaIcon from "../../assets/imgs/ctaIcon.svg";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const CTABtn = () => {
   const [showText, setShowText] = useState(false);
   return (
     <div
-      onClick={() => setShowText(!showText)}
-      className="fixed bottom-10 cursor-pointer z-20 right-3 bg-yellow-primary w-[70px] h-[70px]  flex items-center justify-center rounded-full"
+      className={`fixed bottom-10 md:bottom-2 cursor-pointer hover:bg-white text-white hover:text-[#25D366] duration-300 z-[60]  right-3 bg-[#25D366] w-[70px] h-[70px]  flex items-center justify-center rounded-full `}
     >
-      <div className="relative h-[70%] w-[70%]">
-        <img className="object-contain w-full h-full" src={ctaIcon} alt="cta" />
+      <div
+        className="relative h-[70%] w-[70%]"
+        onClick={() => setShowText(!showText)}
+      >
+        <IoLogoWhatsapp className="w-full h-full " />
       </div>
       <div
         className={`absolute ${
           showText ? "opacity-100" : "opacity-0"
-        } duration-300 right-20 bg-yellow-primary w-[200px] py-2 text-center rounded-md`}
+        } duration-300 right-20 bg-[#25D366] w-[200px] py-2 text-center rounded-md`}
       >
-        <span className="text-white capitalize">contact us</span>
+        <a
+          className="text-white capitalize font-black text-xl"
+          href="whatsapp://send?phone=+213777941413"
+        >
+          contact us{" "}
+        </a>
       </div>
     </div>
   );
